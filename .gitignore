@@ -1,0 +1,10 @@
+.cache/
+artifacts/
+
+node_modules
+/.idea
+*.tsbuildinfo
+
+.DS_Store
+
+target/
