@@ -18,9 +18,11 @@
 - [Metis](https://docs.patract.io/en/metis/intro/overview): Standard Contract Library
 
 ## Demo Setup
-> Making sure you have cargo-contract setup: Please follow the guide on ink! to setup rust, cargo and cargo-contracts
+> Making sure you have cargo-contract setup: Please follow the guide on [ink!](https://substrate.dev/substrate-contracts-workshop/#/0/setup) to setup rust, cargo and cargo-contracts
 
-1. Start your Redspot Project using Redspot templates:
+> Making sure you have `npx` installed
+
+1. Start your first Redspot Project using Redspot templates:
 ```
 npx redspot-new erc20
 ```
@@ -37,7 +39,7 @@ ink_lang = { version = "3.0.0-rc5", default-features = false }
 
 Detailed release information can be found here [Release v0.3.32](https://github.com/patractlabs/europa-ui/releases/tag/v0.3.32).
 Currently, 3 operating systems are supportd:
-* **Windows** 10 (21H1 and above)[europa-ui-v0.3.32-x86_64-win.exe](https://github.com/patractlabs/europa-ui/releases/download/v0.3.32/europa-ui-v0.3.30-x86_64-win.exe)
+* **Windows** 10 (21H1 and above)[europa-ui-v0.3.32-x86_64-win.exe](https://github.com/patractlabs/europa-ui/releases/download/v0.3.32/europa-ui-v0.3.32-x86_64-win.exe)
 * **MacOS** (10.15.7 and above)[europa-ui-v0.3.32-x86_64-darwin.dmg](https://github.com/patractlabs/europa-ui/releases/download/v0.3.32/europa-ui-v0.3.32-x86_64-darwin.dmg)
 * **Ubuntu** (20.04 and above)[europa-ui-v0.3.32-x86_64-linux.AppImage](https://github.com/patractlabs/europa-ui/releases/download/v0.3.32/europa-ui-v0.3.32-x86_64-linux.AppImage)
 > For ubuntu, remember to give it permission `chmod +x europa-ui-v0.3.32-x86_64-linux.AppImage`
@@ -50,7 +52,7 @@ Currently, 3 operating systems are supportd:
 
 4. Test Redspot + Europa using templated contract and config
 ```
-px redspot run scripts/deploy.ts
+npx redspot run scripts/deploy.ts
 ```
 It will compile the contracts and update contract + metadata to Europa-UI. If the metadata does not get uploaded correctly, you can manual add that.
 
