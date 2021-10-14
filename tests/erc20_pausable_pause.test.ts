@@ -39,6 +39,7 @@ describe("ERC20 Pausable Test", () => {
     /// default paused state is be false
     expect((await contract.query.paused()).output).to.equal(false);
 
+    // non-owner should be able to pause 
     it('reverts', async function () {
         await expectRevert(
             contract.connect(receiver).tx.pause(), '',
@@ -47,12 +48,14 @@ describe("ERC20 Pausable Test", () => {
   
     expect((await contract.query.paused()).output).to.equal(false);
 
+    // owner should be able to pause
     await expect(contract.tx.pause())
         .to.emit(contract, 'Paused')
         .withArgs(sender.address);
 
     expect((await contract.query.paused()).output).to.equal(true);
 
+    // owner can unpause
     await expect(contract.tx.unpause())
         .to.emit(contract, 'Unpaused')
         .withArgs(sender.address);

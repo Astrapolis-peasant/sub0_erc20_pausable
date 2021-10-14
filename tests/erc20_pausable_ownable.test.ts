@@ -35,7 +35,7 @@ async function expectRevert(promise, expectedError) {
     it('Owner renounce', async () => {
       const { contract, sender, receiver } = await setup();
   
-      context('owner initial is ok', async function () {
+      context('owner initialization is ok', async function () {
         await expect((await contract.query.getOwnership()).output).to.equal(sender.address);
       });
   
@@ -61,7 +61,7 @@ async function expectRevert(promise, expectedError) {
         await expect((await contract.query.getOwnership()).output).to.equal(sender.address);
       });
   
-      context('owner transfer_ownership not owner will failed', async function () {
+      context('owner transfer_ownership not owner will fail', async function () {
         await expectRevert(
           contract.connect(receiver).tx.transferOwnership(receiver), '',
         );
