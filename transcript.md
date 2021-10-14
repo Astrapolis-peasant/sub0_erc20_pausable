@@ -1,7 +1,7 @@
 # WASM Smart Contracts with Patract Labs
 
 ## Introduction
-Patract Labs is founded with the vision to provide full stack support for smart contract developments based on Substrate. We understand that substrate is a fast growing eco-system for a variaty of different and they are all carrying different purposes. We are seeing all kinds of substrate based projects emerging and booming. 
+Patract Labs is founded with the vision to provide full stack support for smart contract developments based on Substrate. We understand that substrate is a fast growing eco-system for a variaty of different blockchains and they are all carrying different purposes. We are seeing all kinds of substrate based projects emerging and booming. 
 
 However, we think smart contract will play an important role in the substrate eco-system by overseeing expotentially booming projects in other blockchains such as Ethereum, Solana and EOS. Althrough many project are just simple smart contracts but they have brought tremendous values to their eco-system. For example, the Defi projects like Uniswap on Ethereum, Serum on Solana. They are now playing vital roles in the blockchain industry and creates liquidity and practical use cases for the blockchain they were built on. And all those successful projects are back-boned by the developer tools and services such as Traffle, etherscan and Ganache. So we believe by providing mature and secured developer tools and service will further benefit the entire substrate Community which allows more developers to get involved.   
 
@@ -217,7 +217,7 @@ Nested Views
 ```
 npx redspot-new erc20
 ```
-> remember to change the dependencies in `cargo.toml` to pull from crate.io, otherwise it will have compatible issues with `polkadot.js`
+> remember to change the dependencies in `cargo.toml` to pull from crate.io, otherwise it will have compatible issues with `polkadot.js`. ink! is updating very fast and if we pull directly from ink! git, it will have compatible issues. We are seeing problems with Polkadot/app as well. But usually, it get fixed pretty quick.
 
 ```
 ink_primitives = { version = "3.0.0-rc5", default-features = false }
@@ -257,7 +257,7 @@ It will compile the contracts and update contract + metadata to Europa-UI. If th
 5. Copy dependency in [Cargo.toml](./contracts/Cargo.toml) and contract code in [lib.rs](./contracts/lib.rs) into `erc20/contracts/Cargo.toml` and `erc20/contracts/lib.rs`
     - cp -R contracts ink_contracts
     - let's checkout the changes by introducing metis
-        - `Cargo.toml`: we import the metis components that we will be using. note that `metis_lang` is a must have for projects using Metis
+        - `Cargo.toml`: we import the metis components that we will be using. note that `metis_lang` is a must have for projects using Metis. Also, notice we are using branch, as ink! is updating very frequently, to stay compatible with ink! we have corresponding Metis version.
         - `lib.rs`: 
             - instead of just `use ink_lang as ink;`, we import all dependencies from metis
             - storage: we no longer declare our own variables, we composite multiple metis components

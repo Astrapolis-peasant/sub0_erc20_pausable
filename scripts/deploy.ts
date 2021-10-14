@@ -1,4 +1,4 @@
-import { patract, network } from "redspot";
+import { patract, network, artifacts } from "redspot";
 
 const { getContractFactory } = patract;
 const { createSigner, keyring, api } = network;
@@ -26,6 +26,7 @@ async function run() {
     value: "1000 UNIT",
   });
 
+  const abi = artifacts.readArtifact("erc20_pausable");
   console.log("");
   console.log(
     "Deploy successfully. The contract address: ",
