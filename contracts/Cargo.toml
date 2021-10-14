@@ -16,10 +16,10 @@ scale = { package = "parity-scale-codec", version = "2.1", default-features = fa
 scale-info = { version = "0.6", default-features = false, features = ["derive"], optional = true }
 num-traits = { version = "0.2", default-features = false, features = ["i128"] }
 
-metis_lang = { github = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false }
-metis_erc20 = { github = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false  }
-metis_ownable = { github = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false  }
-metis_pausable = { github = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false  }
+metis_lang = { git = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false }
+metis_erc20 = { git = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false  }
+metis_ownable = { git = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false  }
+metis_pausable = { git = "https://github.com/patractlabs/metis", branch = "ink/3.0.0-rc5", default-features = false  }
 
 [lib]
 name = "erc20_pausable"
