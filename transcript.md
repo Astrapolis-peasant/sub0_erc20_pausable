@@ -37,11 +37,11 @@ Many of us have played around with Ink!. However, a great advantage of WASM is t
 - overall layout similar to ink!
 - grammer in Assemblyscript
 
-## Decorators
+### Decorators
 - similar to macros in ink!, Ask! provides decorators. That gives very similar code layout
 - High level abstraction, developers can focus on the contract logics without learning how to interact with host functions and pallet-contract. All the complex stuff are done by Ask! under the hood.
 
-## Storage
+### Storage
 More storages types:
 - SpreadStorableMap 
 - SpreadStorableArray
@@ -50,13 +50,13 @@ More storages types:
 When large amounts of data need to be stored, Spread should be used.
 When you store a small amount of data and need to access most of the content, such as search or statistical logic, it may be better to choose Packed.
 
-## Interface and Inheritance
+### Interface and Inheritance
 Because Rust does not support inheritence, similar computer programming model used in Solidity wont work.   
 With Ask!
 - Solidity developers can quick get used to ask!
 - Support Standard Contract Library similar to Openzeppelin.
 
-## Under development
+### Under development
 - We are at version v0.2 and will publish v0.3 soon.
 
 ## Redspot
@@ -135,7 +135,7 @@ reusable components for users to assemble
         all function user can interact is coded in place, that makes code auditing much easier
     - Cons: Repetition : Repeat writing the same code for existing implementation.
 
-## MCCI architecture
+### MCCI architecture
 - Data Model - Storage
 - Components - implementations
 - Controller - combines different componets, ERC20Pausbale -> erc20, pausable, ownable
